@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<h1>Beat The AI</h1>
+	<h3>"Click on the robot as fast as you can !"</h3>
+
+
+
+	<div class="time-container">
+		<p>Your Time: <span id="time"></span></p>
+
+	</div>
+	<div class="Best-Time">
+		<p>Best Time: <span id="best-time"></span></p>
+
+	</div>
+
+
+
+	
+	<img id="ai" src="img/EvilAI.png" style="width: 150px;">
+
+
+</body>
+
+<script type="text/javascript">
+	
+	var clickedTime; var createdTime; var reactionTime; 
+	var reactionRecord = 100;
+	
+
+
+	function createAI(){
+
+	
+	var time= Math.random();
+	time = time * 2000;
+
+	setTimeout(function(){
+
+		var top = Math.random();
+		top = top * 300;
+
+		var left = Math.random();
+		left = left * 500;
+
+
+		document.getElementById("ai").style.top=top+"px";
+		document.getElementById("ai").style.left=left+"px";
+		document.getElementById("ai").style.display="block";
+		createdTime=Date.now();
+
+		}, time);
+	}
+
+	document.getElementById("ai").onclick=function(){
+		
+		clickedTime=Date.now();
+		reactionTime = (clickedTime - createdTime)/1000;
+		document.getElementById("time").innerHTML=reactionTime;
+
+		if (reactionTime < reactionRecord) {
+			document.getElementById("best-time").innerHTML=reactionRecord=reactionTime;
+			reactionRecord = reactionTime;
+		}
+		document.getElementById("ai").style.display="none";
+		createAI();
+	};
+
+	createAI()
+
+</script>
+</html>

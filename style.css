@@ -1,0 +1,62 @@
+body{
+	background: url("img/city.png") no-repeat, top, center;
+	color: green;
+
+}
+
+h1{
+	color: white;
+	text-align: center;
+}
+
+h3{
+	color: white;
+	text-align:center;
+}
+
+#ai{
+	display: none;
+	position: relative;
+}
+
+.time-container{
+	border: solid 5px white;
+	width: 200px;
+	height: 80px;
+	margin-bottom: 0px;
+	margin-right:50px; 
+}
+
+
+.Best-Time{
+	border: solid 5px white;
+	width: 200px;
+	height: 80px;
+	margin-bottom: 50px;
+	margin-right:50px; 
+
+}
+
+
+.Best-Time p{
+
+	color: green;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	font-family: sans-serif;
+
+}
+
+
+.time-container p{
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	font-family: sans-serif;
+
+}
+
+
+
